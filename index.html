@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f4e9">
+  <title>TerraAI | Touch Grass</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">🌿 TerraAI</a>
+    <span class="open-badge"><span></span> Open-source AI</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR INVITATION TO THE OUTSIDE</p>
+      <h1>Less screen.<br><span>More green.</span></h1>
+      <p class="hero-text">
+        Your AI-powered companion for little adventures
+        and big moments in nature.
+      </p>
+      <a class="primary-btn" href="#mission-form">Find my adventure ↗</a>
+      <div class="hero-art" aria-label="Nature illustration">
+        <span class="sun"></span>
+        <span class="mountain mountain-back"></span>
+        <span class="mountain mountain-front"></span>
+        <span class="tree tree-one">♣</span>
+        <span class="tree tree-two">♣</span>
+        <span class="flower">✿</span>
+        <span class="bird">⌁</span>
+      </div>
+    </section>
+
+    <section class="generator" id="mission-form">
+      <div class="section-heading">
+        <p class="eyebrow">MADE FOR YOUR MOMENT</p>
+        <h2>What's your vibe today?</h2>
+        <p>Choose your mood and let your next adventure find you.</p>
+      </div>
+
+      <form id="mission-form-element">
+        <label for="mood">Your mood</label>
+        <select id="mood">
+          <option value="relaxed">😌 Relaxed</option>
+          <option value="adventurous">🧭 Adventurous</option>
+          <option value="curious">🔎 Curious</option>
+          <option value="energetic">⚡ Energetic</option>
+          <option value="stressed">🌱 Need a reset</option>
+        </select>
+
+        <label for="activity">Choose an activity</label>
+        <select id="activity">
+          <option value="nature exploration">🌿 Nature exploration</option>
+          <option value="walking">🚶 Walking</option>
+          <option value="birdwatching">🐦 Birdwatching</option>
+          <option value="gardening">🌱 Gardening</option>
+          <option value="nature photography">📸 Nature photography</option>
+          <option value="mindfulness">🧘 Outdoor mindfulness</option>
+        </select>
+
+        <label for="duration">How much time do you have?</label>
+        <div class="duration-options">
+          <label class="duration-option">
+            <input type="radio" name="duration" value="10" checked>
+            <span>10 min</span>
+          </label>
+          <label class="duration-option">
+            <input type="radio" name="duration" value="20">
+            <span>20 min</span>
+          </label>
+          <label class="duration-option">
+            <input type="radio" name="duration" value="30">
+            <span>30 min</span>
+          </label>
+          <label class="duration-option">
+            <input type="radio" name="duration" value="60">
+            <span>1 hour</span>
+          </label>
+        </div>
+
+        <button class="primary-btn generate-btn" id="generate-btn" type="submit">
+          ✨ Generate my mission
+        </button>
+      </form>
+
+      <p class="privacy-note">🔒 Your choices stay on your device unless sent to your local AI.</p>
+    </section>
+
+    <section class="mission-section" id="mission-section" hidden>
+      <div class="mission-card">
+        <div class="mission-top">
+          <span class="mission-label">🌎 YOUR OUTDOOR QUEST</span>
+          <span class="points">+50 LEAF POINTS</span>
+        </div>
+        <h2 id="mission-title">Your nature mission</h2>
+        <p id="mission-description"></p>
+        <ul id="mission-steps"></ul>
+        <div class="mission-meta">
+          <span id="mission-time">⏱ 10 minutes</span>
+          <span>📵 Screen-free time</span>
+        </div>
+        <button class="primary-btn" id="start-btn">Start outdoor timer →</button>
+      </div>
+    </section>
+
+    <section class="timer-section" id="timer-section" hidden>
+      <p class="eyebrow">TIME TO TOUCH GRASS</p>
+      <h2 id="timer">10:00</h2>
+      <p>Put your phone away somewhere safe and enjoy the outdoors.</p>
+      <div class="timer-buttons">
+        <button class="primary-btn" id="pause-btn">Pause timer</button>
+        <button class="secondary-btn" id="finish-btn">Finish mission</button>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <p class="eyebrow">YOUR LITTLE WINS</p>
+      <h2>Every step counts.</h2>
+      <div class="stats">
+        <div class="stat-card">
+          <span>🌿</span>
+          <strong id="points">0</strong>
+          <small>Leaf points</small>
+        </div>
+        <div class="stat-card">
+          <span>🧭</span>
+          <strong id="completed">0</strong>
+          <small>Missions done</small>
+        </div>
+        <div class="stat-card">
+          <span>⏱</span>
+          <strong id="minutes">0</strong>
+          <small>Minutes outside</small>
+        </div>
+      </div>
+      <p class="progress-note">Your progress is saved in this browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 🌱 for a world beyond the screen.</p>
+    <p>Powered by open-source AI when connected to Ollama.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
